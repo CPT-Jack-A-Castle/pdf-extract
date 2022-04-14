@@ -1,8 +1,8 @@
 import os
-import string
 import re
+import string
 from ipaddress import ip_address
-from urllib.parse import urlparse, ParseResult
+from urllib.parse import ParseResult, urlparse
 
 import tldextract
 

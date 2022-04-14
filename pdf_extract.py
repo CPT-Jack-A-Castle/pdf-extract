@@ -1,23 +1,23 @@
-import os
 import argparse
 import json
-import string
+import os
 import re
+import string
+from io import StringIO
 from urllib.parse import urlparse
 
-from functions import is_domain, is_subdomain, is_ip, get_protocol, is_valid_domain, get_url_info
 import phonenumbers
 import PyPDF2
-from PyPDF2 import PdfFileReader
-
-from io import StringIO
-
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfdocument import PDFDocument
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
+from PyPDF2 import PdfFileReader
+
+from functions import (get_protocol, get_url_info, is_domain, is_ip,
+                       is_subdomain, is_valid_domain)
 
 EXPECTED_EXTENSION = 'pdf'
 
