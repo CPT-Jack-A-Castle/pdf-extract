@@ -1,0 +1,3 @@
+pdfrw
+pdfreader
+pdfminer - best
